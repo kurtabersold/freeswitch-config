@@ -4,7 +4,7 @@
   with_items:
 #    - { src: 'templates/conf/', dest: '{{ freeswitch_path }}/conf/' }
     - { src: 'templates/conf/vars.xml', dest: '{{ freeswitch_path }}/conf/vars.xml' }
-#    - { src: 'templates/conf/autoload_configs/switch.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/switch.conf.xml' }
+    - { src: 'templates/conf/sip_profiles/external/flowroute.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/flowroute.xml' }
 #    - { src: 'templates/conf/autoload_configs/opal.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/opal.conf.xml' }
 #    - { src: 'templates/conf/autoload_configs/verto.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/verto.conf.xml' }
 #    - { src: 'templates/conf/autoload_configs/xml_curl.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/xml_curl.conf.xml' }
