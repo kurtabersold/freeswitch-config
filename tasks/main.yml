@@ -1,6 +1,6 @@
 ---
 - name: FreeSwitch Config Templates
-  template: src={{item.src}} dest={{item.dest}} force=yes owner=freeswitch group=freeswitch mode=0660
+  template: src={{item.src}} dest={{item.dest}} force=yes owner={{ freeswitch_owner }} group={{ freeswitch_group }} mode=0660
   with_items:
 #    - { src: 'templates/conf/', dest: '{{ freeswitch_path }}/conf/' }
     - { src: 'templates/conf/vars.xml', dest: '{{ freeswitch_path }}/conf/vars.xml' }
