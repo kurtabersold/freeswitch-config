@@ -1,12 +1,28 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Freeswitch config deployed with Ansible.
 
-### What is this repository for? ###
+### Config Variables ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Default variables are displayed, override as needed.
+
+
+General variables
+```
+freeswitch_path: /usr/local/freeswitch #Path to the FreeSwith directory
+freeswitch_owner: freeswitch
+freeswitch_group: daemon
+```
+
+Used in: `conf/sip_profiles/external/flowroute.xml`
+```
+gateway:
+  flowroute:
+    auth_username: "TECH_PREFIX"
+    password: "SIP_PASSORD"
+    proxy: "sip.flowroute.com"
+```
+
 
 ### How do I get set up? ###
 
