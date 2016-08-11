@@ -1,0 +1,20 @@
+---
+- name: FreeSwitch Config Templates
+  template: src={{item.src}} dest={{item.dest}} force=yes owner=freeswitch group=freeswitch mode=0660
+  with_items:
+#    - { src: 'templates/conf/', dest: '{{ freeswitch_path }}/conf/' }
+    - { src: 'templates/conf/vars.xml', dest: '{{ freeswitch_path }}/conf/vars.xml' }
+#    - { src: 'templates/conf/autoload_configs/switch.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/switch.conf.xml' }
+#    - { src: 'templates/conf/autoload_configs/opal.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/opal.conf.xml' }
+#    - { src: 'templates/conf/autoload_configs/verto.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/verto.conf.xml' }
+#    - { src: 'templates/conf/autoload_configs/xml_curl.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/xml_curl.conf.xml' }
+#    - { src: 'templates/conf/dialplan/default.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default.xml' }
+#    - { src: 'templates/conf/sip_profiles/external.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external.xml' }
+#    - { src: 'templates/conf/sip_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/internal.xml' }
+#    - { src: 'templates/conf/skinny_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/skinny_profiles/internal.xml' }
+#    - { src: 'templates/conf/autoload_configs/acl.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/acl.conf.xml' }
+#    - { src: 'templates/conf/dialplan/public/01_twilio_inbound_did.xml', dest: '{{ freeswitch_path }}/conf/dialplan/public/01_twilio_inbound_did.xml' }
+#    - { src: 'templates/conf/dialplan/default/02_twilio.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default/02_twilio.xml' }
+#    - { src: 'templates/conf/sip_profiles/external/twiliotrunk.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/twiliotrunk.xml' }
+  notify:
+    - restart freeswitch

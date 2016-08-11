@@ -1,0 +1,11 @@
+---
+# handlers for freeswitch-config
+
+- name: enable freeswitch
+  service: name=freeswitch enabled=yes
+
+- name: restart freeswitch
+  service: name=freeswitch state=restarted
+
+- name: restart fail2ban
+  service: name=fail2ban state=restarted
