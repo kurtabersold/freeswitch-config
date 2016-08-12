@@ -1,28 +1,28 @@
 <include>
- <extension name="domestic.twilio.short">
+ <extension name="domestic.flowroute.short">
    <condition field="${toll_allow}" expression="domestic"/>
    <condition field="destination_number" expression="^(\d{10})$">
      <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
      <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
-     <action application="bridge" data="sofia/gateway/Twilio-outbound/+1$1"/>
+     <action application="bridge" data="sofia/gateway/flowroute-outbound/+1$1"/>
    </condition>
  </extension>
- <extension name="domestic.twilio">
+ <extension name="domestic.flowroute">
    <condition field="${toll_allow}" expression="domestic"/>
    <condition field="destination_number" expression="^(\d{11})$">
      <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
      <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
-    <action application="bridge" data="sofia/gateway/Twilio-outbound/+$1"/>
+    <action application="bridge" data="sofia/gateway/flowroute-outbound/+$1"/>
    </condition>
  </extension>
- <extension name="international.twilio">
+ <extension name="international.flowroute">
    <condition field="${toll_allow}" expression="international"/>
    <condition field="destination_number" expression="^\+(1|2[1-689]\d|2[07]|3[0-469]|3[578]\d|4[0-13-9]|42\d|5[09]\d|5[1-8]|6[0-6]|6[7-9]\d|7|8[035789]\d|8[1246]|9[0-58]|9[679]\d)(\d+)">
     <action application="set" data="country_code=$1"/>
     <action application="set" data="national_number=$2"/>
     <action application="set" data="effective_caller_id_number=${outbound_caller_id_number}"/>
     <action application="set" data="effective_caller_id_name=${outbound_caller_id_name}"/>
-    <action application="bridge" data="sofia/gateway/Twilio-outbound/+${country_code}${national_number}"/>
+    <action application="bridge" data="sofia/gateway/flowroute-outbound/+${country_code}${national_number}"/>
    </condition>
  </extension>
 </include>

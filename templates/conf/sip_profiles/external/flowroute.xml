@@ -1,5 +1,5 @@
 <include>
-    <gateway name="flowroute">
+    <gateway name="flowroute-outbound">
       <param name="username" value="{{ gateway.flowroute.auth_username }}"/>
       <param name="auth-username" value="{{ gateway.flowroute.auth_username }}"/>
       <param name="password" value="{{ gateway.flowroute.password }}"/>
