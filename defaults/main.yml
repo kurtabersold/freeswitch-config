@@ -10,3 +10,8 @@ gateway:
     password: "SIP_PASSORD"
     proxy: "sip.flowroute.com"
 
+inbound_did:
+  flowroute:
+    did01:
+      number: "+15555551212"
+      extension: "1001"

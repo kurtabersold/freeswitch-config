@@ -13,7 +13,7 @@
 #    - { src: 'templates/conf/sip_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/internal.xml' }
 #    - { src: 'templates/conf/skinny_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/skinny_profiles/internal.xml' }
 #    - { src: 'templates/conf/autoload_configs/acl.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/acl.conf.xml' }
-#    - { src: 'templates/conf/dialplan/public/01_twilio_inbound_did.xml', dest: '{{ freeswitch_path }}/conf/dialplan/public/01_twilio_inbound_did.xml' }
+    - { src: 'templates/conf/dialplan/public/01_flowroute_inbound_did.xml', dest: '{{ freeswitch_path }}/conf/dialplan/public/01_flowroute_inbound_did.xml' }
     - { src: 'templates/conf/dialplan/default/02_flowroute.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default/02_flowroute.xml' }
 #    - { src: 'templates/conf/sip_profiles/external/twiliotrunk.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/twiliotrunk.xml' }
   notify:

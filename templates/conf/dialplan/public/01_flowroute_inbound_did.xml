@@ -1,0 +1,8 @@
+<include>
+  <extension name="flowroute">
+    <condition field="destination_number" expression="^(\{{ inbound_did.flowroute.did01.number  }})$">
+      <action application="set" data="domain_name=$${domain}"/>
+      <action application="transfer" data="{{ inbound_did.flowroute.did01.extension }} XML default"/>
+    </condition>
+  </extension>
+</include>
