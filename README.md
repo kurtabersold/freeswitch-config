@@ -23,6 +23,15 @@ gateway:
     proxy: "sip.flowroute.com"
 ```
 
+Used in `conf/dialplan/public/01_flowroute_inbound_did.xml`
+```
+inbound_did:
+  flowroute:
+    did01:
+      number: "+15555551212"
+      extension: "1001"
+```
+
 
 ### How do I get set up? ###
 
