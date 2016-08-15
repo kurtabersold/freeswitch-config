@@ -14,6 +14,14 @@ freeswitch_owner: freeswitch
 freeswitch_group: daemon
 ```
 
+Client Credential Related
+Used in `conf/vars.xml`, `conf/directory/default/`
+```
+credentials:
+  default:
+    password: "1234"
+```
+
 Used in: `conf/sip_profiles/external/flowroute.xml`
 ```
 gateway:
