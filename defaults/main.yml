@@ -1,4 +1,5 @@
 ---
+# defaults file for freeswitch-config
 
 freeswitch_path: /usr/local/freeswitch #Path to the FreeSwith directory
 freeswitch_owner: freeswitch
