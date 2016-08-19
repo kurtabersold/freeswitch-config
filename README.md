@@ -1,7 +1,7 @@
 freeswitch-config
 =================
 
-[![Build Status](https://travis-ci.org/kurtabersold/freeswitch.svg?branch=master)](https://travis-ci.org/kurtabersold/freeswitch)
+[![Build Status](https://travis-ci.org/kurtabersold/freeswitch-config.svg?branch=master)](https://travis-ci.org/kurtabersold/freeswitch-config)
 
 Freeswitch config deployed with Ansible.
 
