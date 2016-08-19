@@ -1,8 +1,19 @@
-# README #
+freeswitch-config
+=================
+
+[![Build Status](https://travis-ci.org/kurtabersold/freeswitch.svg?branch=master)](https://travis-ci.org/kurtabersold/freeswitch)
 
 Freeswitch config deployed with Ansible.
 
-### Config Variables ###
+Requirements
+------------
+
+Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+
+Role Variables
+--------------
+
+A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
 Default variables are displayed, override as needed.
 
@@ -40,26 +51,31 @@ inbound_did:
       extension: "1001"
 ```
 
+Dependencies
+------------
 
-### How do I get set up? ###
+A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Example Playbook
+----------------
 
-### Contribution guidelines ###
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-* Writing tests
-* Code review
-* Other guidelines
+    - hosts: servers
+      roles:
+         - { role: username.rolename, x: 42 }
 
-### Who do I talk to? ###
+License
+-------
 
-* Repo owner or admin
-* Other community or team contact
+BSD
 
-### Freeswitch Config Layout ###
+Author Information
+------------------
+
+An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+
+Freeswitch Config Layout
+------------------------
+
 ![fs_default_config.jpg](https://freeswitch.org/confluence/download/attachments/6587388/fs_default_config.jpg)

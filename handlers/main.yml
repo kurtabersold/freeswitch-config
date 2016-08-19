@@ -1,5 +1,5 @@
 ---
-# handlers for freeswitch-config
+# handlers file for freeswitch-config
 
 - name: enable freeswitch
   service: name=freeswitch enabled=yes
