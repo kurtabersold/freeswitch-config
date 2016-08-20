@@ -25,12 +25,32 @@ freeswitch_owner: freeswitch
 freeswitch_group: daemon
 ```
 
-Client Credential Related
+Users Passwords:
 Used in `conf/vars.xml`, `conf/directory/default/`
 ```
 credentials:
   default:
     password: "1234"
+
+users:
+  default:
+    password: "4321"
+    vm_pass:  "4321"
+  1000:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1001:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1002:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1003:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1004:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
 ```
 
 Used in: `conf/sip_profiles/external/flowroute.xml`
