@@ -20,3 +20,23 @@ inbound_did:
     did01:
       number: "+15555551212"
       extension: "1001"
+
+users:
+  default:
+    password: "4321"
+    vm_pass:  "4321"
+  1000:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1001:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1002:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1003:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
+  1004:
+    password: "{{ users.default.password }}"
+    vm_pass:  "{{ users.default.vm_pass }}"
