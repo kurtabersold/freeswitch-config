@@ -28,10 +28,6 @@ freeswitch_group: daemon
 Users Passwords:
 Used in `conf/vars.xml`, `conf/directory/default/`
 ```
-credentials:
-  default:
-    password: "1234"
-
 users:
   default:
     password: "4321"
