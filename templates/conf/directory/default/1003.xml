@@ -1,8 +1,8 @@
 <include>
   <user id="1003">
     <params>
-      <param name="password" value="$${default_password}"/>
-      <param name="vm-password" value="1003"/>
+      <param name="password" value="{{ users.1003.password }}"/>
+      <param name="vm-password" value="{{ users.1003.vm_pass }}"/>
     </params>
     <variables>
       <variable name="toll_allow" value="domestic,international,local"/>
