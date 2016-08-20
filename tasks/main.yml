@@ -18,5 +18,10 @@
     - { src: 'templates/conf/dialplan/public/01_flowroute_inbound_did.xml', dest: '{{ freeswitch_path }}/conf/dialplan/public/01_flowroute_inbound_did.xml' }
     - { src: 'templates/conf/dialplan/default/02_flowroute.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default/02_flowroute.xml' }
 #    - { src: 'templates/conf/sip_profiles/external/twiliotrunk.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/twiliotrunk.xml' }
+    - { src: 'templates/conf/directory/default/1000.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1000.xml' }
+    - { src: 'templates/conf/directory/default/1001.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1001.xml' }
+    - { src: 'templates/conf/directory/default/1002.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1002.xml' }
+    - { src: 'templates/conf/directory/default/1003.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1003.xml' }
+    - { src: 'templates/conf/directory/default/1004.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1004.xml' }
   notify:
     - restart freeswitch
