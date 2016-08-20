@@ -5,10 +5,6 @@ freeswitch_path: /usr/local/freeswitch #Path to the FreeSwith directory
 freeswitch_owner: freeswitch
 freeswitch_group: daemon
 
-credentials:
-  default:
-    password: "1234"
-
 gateway:
   flowroute:
     auth_username: "TECH_PREFIX"
