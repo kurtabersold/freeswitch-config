@@ -1,9 +1,9 @@
 <configuration name="event_socket.conf" description="Socket Client">
   <settings>
-    <param name="nat-map" value="false"/>
-    <param name="listen-ip" value="::"/>
-    <param name="listen-port" value="8021"/>
-    <param name="password" value="ClueCon"/>
+    <param name="nat-map" value="{{ event_socket.nat_map (false) }}"/>
+    <param name="listen-ip" value="{{ event_socket.listen_ip (::)"/>
+    <param name="listen-port" value="{{ event_socket.listen_port (8021)  }}"/>
+    <param name="password" value="{{ event_socket.password (ClueCon)"/>
     <!--<param name="apply-inbound-acl" value="loopback.auto"/>-->
     <!--<param name="stop-on-bind-error" value="true"/>-->
   </settings>
