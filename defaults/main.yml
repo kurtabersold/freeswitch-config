@@ -3,7 +3,7 @@
 
 freeswitch_path: /usr/local/freeswitch #Path to the FreeSwith directory
 freeswitch_owner: freeswitch
-freeswitch_group: daemon
+freeswitch_group: freeswitch
 
 rtp_start_port: 16384
 rtp_end_port: 32769
@@ -20,11 +20,11 @@ inbound_did:
       number: "+15555551212"
       extension: "1001"
 
-eventsocket:
-  nat_map:
-  listen_ip:
-  listen_port:
-  password:
+event_socket:
+  nat_map: "false"
+  listen_ip: "::"
+  listen_port: "8021"
+  password: "ClueCon"
 
 users:
   default:
