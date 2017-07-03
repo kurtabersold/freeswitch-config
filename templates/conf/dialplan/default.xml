@@ -747,6 +747,18 @@
       </condition>
     </extension>
 
+
+    <extension name="Asterisk">
+      <condition field="destination_number" expression="^9200$">
+	<action application="answer"/>
+	<action application="sleep" data="500"/>
+	<action application="playback" data="ivr/ivr-asterisk_like_syphilis.wav"/>
+	<action application="sleep" data="500"/>
+	<!-- <action application="transfer" data="$1 asterisk default"/> -->
+        <action application="execute_extension" data="$1 asterisk default"/>
+      </condition>
+    </extension>
+
     <!-- install zrtp_agent.lua into scripts (ZRTP == 9787) -->
     <extension name="zrtp_enrollement">
       <condition field="destination_number" expression="^9787$">
