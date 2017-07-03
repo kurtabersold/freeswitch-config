@@ -26,3 +26,14 @@
     - { src: 'templates/conf/directory/default/1004.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1004.xml' }
   notify:
     - restart freeswitch
+
+- name: FreeSwitch Maintenance
+  template:
+    src: "{{item.src}}"
+    dest: "{{item.dest}}"
+    force: yes
+    owner: "{{item.owner}}"
+    group: "{{item.group}}"
+    mode: "{{item.mode}}"
+  with_items:
+    - { src: 'templates/logrotate', dest: '/etc/logrotate.d/freeswitch', owner: 'root', group: 'root', mode: '0640' }

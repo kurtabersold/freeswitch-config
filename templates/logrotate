@@ -1,0 +1,17 @@
+{{ freeswitch_path }}/log/freeswitch.log
+{{ freeswitch_path }}/log/fail2ban.log
+{
+  missingok
+  rotate 90
+  daily
+  compress
+  delaycompress
+  dateext
+  dateformat -%Y%m%d
+  dateyesterday
+  nocreate
+  postrotate
+    {{ freeswitch_path }}/bin/fs_cli -P {{ event_socket.listen_port }} -p {{ event_socket.password }} -x 'fsctl send_sighup' > /dev/null 2>&1
+  endscript
+}
+
