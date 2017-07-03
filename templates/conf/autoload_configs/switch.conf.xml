@@ -153,7 +153,7 @@
     <!-- Test each port to make sure it is not in use by some other process before allocating it to RTP -->
     <!-- <param name="rtp-port-usage-robustness" value="true"/> -->
 
-    <param name="rtp-enable-zrtp" value="false"/>
+    <param name="rtp-enable-zrtp" value="true"/>
 
     <!--
 	 Store encryption keys for secure media in channel variables and call CDRs. Default: false.

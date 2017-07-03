@@ -2,28 +2,32 @@
 # tasks file for freeswitch-config
 
 - name: FreeSwitch Config Templates
-  template: src={{item.src}} dest={{item.dest}} force=yes owner={{ freeswitch_owner }} group={{ freeswitch_group }} mode=0660
+  template:
+    src: "{{item.src}}"
+    dest: "{{item.dest}}"
+    force: yes
+    owner: "{{ freeswitch_owner }}"
+    group: "{{ freeswitch_group }}"
+    mode: 0660
   with_items:
-#    - { src: 'templates/conf/', dest: '{{ freeswitch_path }}/conf/' }
-    - { src: 'templates/conf/vars.xml', dest: '{{ freeswitch_path }}/conf/vars.xml' }
-    - { src: 'templates/conf/sip_profiles/external/flowroute.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/flowroute.xml' }
-#    - { src: 'templates/conf/autoload_configs/opal.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/opal.conf.xml' }
-#    - { src: 'templates/conf/autoload_configs/verto.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/verto.conf.xml' }
-#    - { src: 'templates/conf/autoload_configs/xml_curl.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/xml_curl.conf.xml' }
-#    - { src: 'templates/conf/dialplan/default.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default.xml' }
-#    - { src: 'templates/conf/sip_profiles/external.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external.xml' }
-    - { src: 'templates/conf/sip_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/internal.xml' }
-#    - { src: 'templates/conf/skinny_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/skinny_profiles/internal.xml' }
-#    - { src: 'templates/conf/autoload_configs/acl.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/acl.conf.xml' }
+    - { src: 'templates/conf/autoload_configs/event_socket.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/event_socket.conf.xml' }
+    - { src: 'templates/conf/autoload_configs/fail2ban.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/fail2ban.conf.xml' }
     - { src: 'templates/conf/autoload_configs/logfile.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/logfile.conf.xml' }
-    - { src: 'templates/conf/dialplan/public/01_flowroute_inbound_did.xml', dest: '{{ freeswitch_path }}/conf/dialplan/public/01_flowroute_inbound_did.xml' }
+    - { src: 'templates/conf/autoload_configs/modules.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/modules.conf.xml' }
+    - { src: 'templates/conf/autoload_configs/switch.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/switch.conf.xml' }
+    - { src: 'templates/conf/autoload_configs/verto.conf.xml', dest: '{{ freeswitch_path }}/conf/autoload_configs/verto.conf.xml' }
     - { src: 'templates/conf/dialplan/default/02_flowroute.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default/02_flowroute.xml' }
-#    - { src: 'templates/conf/sip_profiles/external/twiliotrunk.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/twiliotrunk.xml' }
+    - { src: 'templates/conf/dialplan/default.xml', dest: '{{ freeswitch_path }}/conf/dialplan/default.xml' }
+    - { src: 'templates/conf/dialplan/public/01_flowroute_inbound_did.xml', dest: '{{ freeswitch_path }}/conf/dialplan/public/01_flowroute_inbound_did.xml' }
     - { src: 'templates/conf/directory/default/1000.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1000.xml' }
     - { src: 'templates/conf/directory/default/1001.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1001.xml' }
     - { src: 'templates/conf/directory/default/1002.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1002.xml' }
     - { src: 'templates/conf/directory/default/1003.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1003.xml' }
     - { src: 'templates/conf/directory/default/1004.xml', dest: '{{ freeswitch_path }}/conf/directory/default/1004.xml' }
+    - { src: 'templates/conf/extensions.conf', dest: '{{ freeswitch_path }}/conf/extensions.conf' }
+    - { src: 'templates/conf/sip_profiles/external/flowroute.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/external/flowroute.xml' }
+    - { src: 'templates/conf/sip_profiles/internal.xml', dest: '{{ freeswitch_path }}/conf/sip_profiles/internal.xml' }
+    - { src: 'templates/conf/vars.xml', dest: '{{ freeswitch_path }}/conf/vars.xml' }
   notify:
     - restart freeswitch
 
